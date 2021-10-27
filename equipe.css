@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/*---- TOP ----*/ 
+
+.top{
+    padding: 30px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    width: 90.5%;
+    z-index: 10000;
+}
+
+.top h1{
+    text-align: center;
+    font-weight: lighter;
+    color: rgb(58, 58, 58);
+}
+
+.top .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.menu .left,
+.menu .right{
+    margin: 0px 15px 0px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn{
+    cursor: pointer;
+    border: none;
+    font-size: 17px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.menu .right .pannier{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu .right .pannier .btn{
+    font-size: 20px;
+    padding: 10px ;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+/*---- DROPDOWN PLUS ----*/ 
+
+.dropdown{
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    background-color: white;
+    right: 8%;
+}
+
+.menu .left .dropdown-plus:nth-child(6):hover .dropdown{
+    display: flex;
+}
+
+/*---- DROPDOWN LOGIN ----*/ 
+
+.menu .right .login button{
+    font-size: 17px;
+    padding: 10px 2px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    cursor: pointer;
+    border: none;
+}
+
+.menu .right .login button i:nth-child(1){
+    font-size: 21px;
+    color: #233f6e;
+}
+
+.dropdown-login-content{
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    background-color: white;
+    right: 8%;
+}
+
+.menu .right .dropdown-login:hover .dropdown-login-content{
+    display: flex;
+}
+
+/*---- CONTACT ----*/ 
+
+.contact{
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .cards .card-1,
+.contact .cards .card-2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0px 0px;
+}
+
+.cards .card{
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+
+    
+}
+
+
+.cards .card img{
+    margin: 10px;
+    border-radius: 50%;
+    width: 50%;
+}
+
+.cards .card h1{
+    margin: 10px 0px;
+    color: #233f6e;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.cards .card h2{
+    margin: 10px;
+    color: rgb(87, 87, 87);
+    font-size: 1.7em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.cards .card p{    
+    height: 125px;
+    margin: 20px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.cards .card a{
+    margin: 20px;
+    padding: 15px 20px;
+    background-color: #233f6e;
+    color: white;
+    transition-duration: 300ms;
+}
+
+.cards .card a:hover{
+    background-color: #233e6ece;
+}
+
+
+
+
+
+
+
+/*---- FOOTER ----*/ 
+
+footer{
+    border-top: 1px rgb(63, 63, 63) solid;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+footer p{
+    color: gray;
+    font-size: 17px;
+}
