@@ -181,7 +181,9 @@ body{
     font-weight: lighter;
 }
 
-.cards .card a{
+.cards .card button{
+    cursor: pointer;
+    border: none;
     margin: 20px;
     color: white;
     background-color: #233f6e;
@@ -229,3 +231,4 @@ footer p{
     color: gray;
     font-size: 17px;
 }
+

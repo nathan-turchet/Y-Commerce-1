@@ -256,3 +256,22 @@ footer p{
     color: gray;
     font-size: 17px;
 }
+
+
+/*------ RESPONSIVE ------*/
+
+@media screen and (max-width: 1300px) {
+    
+    .contain .content-img{
+        display: none;
+    }
+
+    .contain .contact{
+        width: 75%;
+    }
+
+    .contain .contact .content{
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME | Y-Commerce</title>
+    <link rel="stylesheet" href="compte.css">
+    <script src="https://kit.fontawesome.com/0c87a70838.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="top">
+        <a href="home.html">
+            <h1>Y-COMMERCE</h1>
+        </a>
+        <div class="menu">
+            <div class="left">
+                <a class="btn" href="home.html">HOME</a>
+                <a class="btn" href="abonnement.html">Abonnement</a>
+                <a class="btn" href="boutique.html">Boutique</a>
+                <a class="btn" href="">À propos de nous</a>
+                <a class="btn" href="contact.html">Contact</a>
+                <div class="dropdown-plus">
+                    <button class="btn drop">Plus</button>
+                    <div class="dropdown">
+                        <a class="btn" href="equipe.html">Notre équipe</a>
+                        <a class="btn" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="login">
+                    <div class="dropdown-login">
+                        <button>
+                            <i class="fas fa-user-circle"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-login-content">
+                            <a class="btn" href="">Vos Abonnement</a>
+                            <a class="btn" href="">Vos Commande</a>
+                            <a class="btn" href="">Info de paiement</a>
+                            <a class="btn" href="compte.html">Mon Compte</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pannier">
+                    <a class="btn" href="pannier.html">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown-responsive">
+            <button class="btn-bar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="dropdown-responsive-content">
+                <a class="btn-dropdown-responsive" href="home.html">HOME</a>
+                <a class="btn-dropdown-responsive" href="abonnement.html">Abonnement</a>
+                <a class="btn-dropdown-responsive" href="boutique.html">Boutique</a>
+                <a class="btn-dropdown-responsive" href="">À propos de nous</a>
+                <a class="btn-dropdown-responsive" href="contact.html">Contact</a>
+                <div class="dropdown-responsive-plus">
+                    <button class="btn-dropdown-responsive">Plus</button>
+                    <div class="dropdown-responsive-content-plus">
+                        <a class="btn-dropdown-responsive-plus btn-dropdown-responsive" href="equipe.html">Notre équipe</a>
+                        <a class="btn-dropdown-responsive-plus btn-dropdown-responsive" href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="dropdown-login-responsive">
+                    <button class="btn-dropdown-responsive">
+                        <i class="fas fa-user-circle"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-login-content-responsive">
+                        <a class="btn-dropdown-responsive btn-dropdown-responsive-login" href="">Vos Abonnement</a>
+                        <a class="btn-dropdown-responsive btn-dropdown-responsive-login" href="">Vos Commande</a>
+                        <a class="btn-dropdown-responsive btn-dropdown-responsive-login" href="">Info de paiement</a>
+                        <a class="btn-dropdown-responsive btn-dropdown-responsive-login" href="">Mon Compte</a>
+                    </div>
+                </div>
+                <a class="btn-dropdown-responsive" href="">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contain">
+        <div class="compte">
+            <div class="content">
+                <h1>CRÉE VOTRE COMPTE</h1>
+                <form class="formulaire" action="create-account.php">
+                    <div class="label">
+                        <span>Nom *</span>
+                        <input placeholder="Saisissez votre nom" type="text" name="name" required>
+                    </div>
+                    <div class="label">
+                        <span>Prénom *</span>
+                        <input placeholder="Saisissez votre prénom" type="text" name="prenom" required>
+                    </div>
+                    <div class="label">
+                        <span>E-mail *</span>
+                        <input placeholder="Saisissez votre e-mail" type="email" name="email" required>
+                    </div>
+                    <div class="label">
+                        <span>Téléphone </span>
+                        <input placeholder="+33 6 00 00 00 00" type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="label">
+                        <span>Date de naissance</span>
+                        <input placeholder="Saisissez votre date de naissance" type="date" name="naissance" required>
+                    </div>
+                    <div class="label">
+                        <span>Mot de passe</span>
+                        <input placeholder="Entrez un mot de passe" type="password" name="mot_de_passe" required>
+                    </div>
+                    <div class="label">
+                        <span>Confirmez votre mot de passe</span>
+                        <input placeholder="Confirmez le mot de passe" type="password" name="mot_de_passe_confirm" required>
+                    </div>
+                    <div class="bouton">
+                        <input class="btn" type="submit">
+                    </div>
+                    <p class="echo"></p>
+                </form>
+            </div>
+        </div>
+        <div class="shopping">
+            <div class="content">
+                <h1>Votre pannier</h1>
+                <div class="shopping-content">
+                    <div class="vide-shopping-content">
+                        <span>Il n'y a aucun article dans votre panier.</span>
+                        <a href="boutique.html">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; Product by Y-Commerce</p>
+    </footer>
+</body>
+</html>

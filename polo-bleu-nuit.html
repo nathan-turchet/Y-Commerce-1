@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Slider</title>
+<head>  
+  <title>Polo Bleu Nuit | Y-Commerce</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -14,7 +14,7 @@
 <body>
 
     <div class="top">
-        <a href="home.html">
+        <a class="a-h1" href="home.html">
             <h1>Y-COMMERCE</h1>
         </a>
         <div class="menu">
@@ -58,67 +58,104 @@
 
 
     <div class="content">
-        <div class="content-wrapper">
-            <div class="column">
-                <img id=featured src="images/vetement/polo-bleu-nuit1-square.png">
-                <div id="slide-wrapper" >
-                    <div id="slider">
-                        <img class="thumbnail active" src="images/vetement/polo-bleu-nuit1-square.png">
-                        <img class="thumbnail" src="images/vetement/polo-grist1-square.png">
-                        <img class="thumbnail" src="images/vetement//t-shirt-blanc-logo1-square.png">
-                    </div>
-                </div>
+        <div class="product_images_slider">
+            <div class="big_img">
+                <button onclick="ChangeSlide(-1)" class="arrow arrow_left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <img src="images/vetement/polo-bleu-nuit1-square.png" id="slide">
+                <button onclick="ChangeSlide(1)" class="arrow arrow_right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-    
-            <div class="column">
-                <h1>Awesome Shoes</h1>
-                <hr>
-                <h3>$89.99</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <input value=1 min="1" max="30" type="number">
-                <a class="btn btn-dark" href="#">Add to Cart</a>
+            
+            <div class="small_img">
+                <button onclick="ChangeSlideImages(1)">
+                    <img src="images/vetement/polo-bleu-nuit1-square.png" alt="1" id="numero_image">
+                </button>
+                <button onclick="ChangeSlideImages(2)">
+                    <img src="images/vetement/polo-grist1-square.png" alt="2" id="numero_image">
+                </button>
+                <button onclick="ChangeSlideImages(3)">
+                    <img src="images/vetement/t-shirt-blanc-logo1-square.png" alt="3" id="numero_image">
+                </button>
+                <button onclick="ChangeSlideImages(4)">
+                    <img src="images/vetement/t-shirt-noir-logo1-square.png" alt="4" id="numero_image">
+                </button>
+            </div>
+
+        </div>
+        <div class="product_description">
+            <h1>Polo Bleu Nuit</h1>
+            <p class="prix">30,00 €</p>
+            <p class="p_color">
+                <strong>COULEUR</strong>
+                <span class="span_color">Bleu</span>
+            </p>
+            <button>
+                <img src="images/vetement/polo-bleu-nuit1-square.png" alt="">
+            </button>
+            <div class="taille">
+                <p>
+                    <strong>TAILLE</strong>
+                </p>
+                <button class="btn_taille">XS</button>
+                <button class="btn_taille">S</button>
+                <button class="btn_taille">M</button>
+                <button class="btn_taille">L</button>
+                <button class="btn_taille">XL</button>
+                <button class="btn_taille">XXL</button>
             </div>
         </div>
     </div>
+  
 
 	<footer>
         <p>&copy; Product by Y-Commerce</p>
     </footer>
 
-	<script type="text/javascript">
-		let thumbnails = document.getElementsByClassName('thumbnail')
 
-		let activeImages = document.getElementsByClassName('active')
-
-		for (var i=0; i < thumbnails.length; i++){
-
-			thumbnails[i].addEventListener('mouseover', function(){
-				console.log(activeImages)
-				
-				if (activeImages.length > 0){
-					activeImages[0].classList.remove('active')
-				}
-				
-
-				this.classList.add('active')
-				document.getElementById('featured').src = this.src
-			})
-		}
+    <script src="product.js"></script>
 
 
-		let buttonRight = document.getElementById('slideRight');
-		let buttonLeft = document.getElementById('slideLeft');
+    <script>
 
-		buttonLeft.addEventListener('click', function(){
-			document.getElementById('slider').scrollLeft -= 180
-		})
+        var slide = new Array("images/vetement/polo-bleu-nuit1-square.png", "images/vetement/polo-grist1-square.png", "images/vetement/t-shirt-blanc-logo1-square.png", "images/vetement/t-shirt-noir-logo1-square.png");
+        var numero = 0;
 
-		buttonRight.addEventListener('click', function(){
-			document.getElementById('slider').scrollLeft += 180
-		})
+        function ChangeSlide(sens) {
+            numero = numero + sens;
+            if (numero < 0)
+                numero = slide.length - 1;
+            if (numero > slide.length - 1)
+                numero = 0;
+            document.getElementById("slide").src = slide[numero];
+        }
 
+        var numero_image = 0;
 
-	</script>
+        function ChangeSlideImages(ordre) {
+            numero_image =  numero_image + ordre;
+            if (numero_image === 1){
+                document.getElementById("slide").src = "images/vetement/polo-bleu-nuit1-square.png";
+            }
+            if (numero_image === 2){
+                document.getElementById("slide").src = "images/vetement/polo-grist1-square.png";
+            }
+            if (numero_image === 3){
+                document.getElementById("slide").src = "images/vetement/t-shirt-blanc-logo1-square.png";
+            }
+            if (numero_image === 4){
+                document.getElementById("slide").src = "images/vetement/t-shirt-noir-logo1-square.png";
+            }
+            else{
+                document.getElementById("slide").scr = "images/logo/apple-pay.png"
+            }
+        }
+
+    </script>
 
 </body>
 </html>
+
+
